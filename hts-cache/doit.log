@@ -1,8 +1,0 @@
-http://wearekllr.com/demos/scrn/demos/index-minimal.html -W -O "/home/frederick/Dev/websites/sample" -%v
-File generated automatically on Sat, 14 Mar 2020 17:44:11, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-
