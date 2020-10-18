@@ -177,3 +177,83 @@ mkdir: cannot create directory '/var/www/cafrecode': Permission denied
   INFO [4a620a76] Running /usr/bin/env echo "Branch develop (at e2a6fb5e18b7abe90f66e9bb82c56860e04c9fcf) deployed as release 20201018042432 by frederick" >> /home/frederick/sites/cafrecode/revisions.log as frederick@dev.cafrecode.co.ke
  DEBUG [4a620a76] Command: cd /home/frederick/sites/cafrecode/releases && /usr/bin/env echo "Branch develop (at e2a6fb5e18b7abe90f66e9bb82c56860e04c9fcf) deployed as release 20201018042432 by frederick" >> /home/frederick/sites/cafrecode/revisions.log
   INFO [4a620a76] Finished in 7.372 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-10-18 08:00:58 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [393a1b43] Running /usr/bin/env mkdir -p /tmp as frederick@dev.cafrecode.co.ke
+ DEBUG [393a1b43] Command: /usr/bin/env mkdir -p /tmp
+  INFO [393a1b43] Finished in 9.446 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cafrecode-production-frederick.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cafrecode-production-frederick.sh 100.0%
+  INFO [26f7d7cc] Running /usr/bin/env chmod 700 /tmp/git-ssh-cafrecode-production-frederick.sh as frederick@dev.cafrecode.co.ke
+ DEBUG [26f7d7cc] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cafrecode-production-frederick.sh
+  INFO [26f7d7cc] Finished in 1.121 seconds with exit status 0 (successful).
+  INFO [b3680d8c] Running /usr/bin/env git ls-remote git@github.com:nightcrawler-/nightcrawler-.github.io.git HEAD as frederick@dev.cafrecode.co.ke
+ DEBUG [b3680d8c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env git ls-remote git@github.com:nightcrawler-/nightcrawler-.github.io.git HEAD )
+ DEBUG [b3680d8c] 	Warning: Permanently added the RSA host key for IP address '140.82.112.4' to the list of known hosts.
+ DEBUG [b3680d8c] 	a11786a379e404b85b8334ce4237db5155e478ed	HEAD
+  INFO [b3680d8c] Finished in 6.139 seconds with exit status 0 (successful).
+  INFO [ea005539] Running /usr/bin/env mkdir -p /home/frederick/sites/cafrecode/shared /home/frederick/sites/cafrecode/releases as frederick@dev.cafrecode.co.ke
+ DEBUG [ea005539] Command: /usr/bin/env mkdir -p /home/frederick/sites/cafrecode/shared /home/frederick/sites/cafrecode/releases
+  INFO [ea005539] Finished in 4.507 seconds with exit status 0 (successful).
+ DEBUG [8a9951bf] Running [ -f /home/frederick/sites/cafrecode/current/REVISION ] as frederick@dev.cafrecode.co.ke
+ DEBUG [8a9951bf] Command: [ -f /home/frederick/sites/cafrecode/current/REVISION ]
+ DEBUG [8a9951bf] Finished in 10.145 seconds with exit status 0 (successful).
+ DEBUG [a1e87dbb] Running /usr/bin/env cat /home/frederick/sites/cafrecode/current/REVISION 2>/dev/null as frederick@dev.cafrecode.co.ke
+ DEBUG [a1e87dbb] Command: /usr/bin/env cat /home/frederick/sites/cafrecode/current/REVISION 2>/dev/null
+ DEBUG [a1e87dbb] 	e2a6fb5e18b7abe90f66e9bb82c56860e04c9fcf
+ DEBUG [a1e87dbb] Finished in 1.421 seconds with exit status 0 (successful).
+ DEBUG [4f0001c3] Running [ -f /home/frederick/sites/cafrecode/repo/HEAD ] as frederick@dev.cafrecode.co.ke
+ DEBUG [4f0001c3] Command: [ -f /home/frederick/sites/cafrecode/repo/HEAD ]
+ DEBUG [4f0001c3] Finished in 4.518 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/frederick/sites/cafrecode/repo
+ DEBUG [cf00a781] Running if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi as frederick@dev.cafrecode.co.ke
+ DEBUG [cf00a781] Command: if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi
+ DEBUG [cf00a781] Finished in 4.661 seconds with exit status 0 (successful).
+  INFO [86c00ea1] Running /usr/bin/env git remote set-url origin git@github.com:nightcrawler-/nightcrawler-.github.io.git as frederick@dev.cafrecode.co.ke
+ DEBUG [86c00ea1] Command: cd /home/frederick/sites/cafrecode/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env git remote set-url origin git@github.com:nightcrawler-/nightcrawler-.github.io.git )
+  INFO [86c00ea1] Finished in 1.262 seconds with exit status 0 (successful).
+  INFO [3a52b8df] Running /usr/bin/env git remote update --prune as frederick@dev.cafrecode.co.ke
+ DEBUG [3a52b8df] Command: cd /home/frederick/sites/cafrecode/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3a52b8df] 	Fetching origin
+ DEBUG [3a52b8df] 	From github.com:nightcrawler-/nightcrawler-.github.io
+   e2a6fb5..46fd982  develop    -> develop
+  INFO [3a52b8df] Finished in 2.865 seconds with exit status 0 (successful).
+ DEBUG [28e4c5a5] Running if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi as frederick@dev.cafrecode.co.ke
+ DEBUG [28e4c5a5] Command: if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi
+ DEBUG [28e4c5a5] Finished in 4.475 seconds with exit status 0 (successful).
+  INFO [45821a8c] Running /usr/bin/env mkdir -p /home/frederick/sites/cafrecode/releases/20201018050133 as frederick@dev.cafrecode.co.ke
+ DEBUG [45821a8c] Command: cd /home/frederick/sites/cafrecode/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env mkdir -p /home/frederick/sites/cafrecode/releases/20201018050133 )
+  INFO [45821a8c] Finished in 1.055 seconds with exit status 0 (successful).
+  INFO [8bd84838] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/frederick/sites/cafrecode/releases/20201018050133 as frederick@dev.cafrecode.co.ke
+ DEBUG [8bd84838] Command: cd /home/frederick/sites/cafrecode/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/frederick/sites/cafrecode/releases/20201018050133 )
+  INFO [8bd84838] Finished in 1.271 seconds with exit status 0 (successful).
+ DEBUG [1fa9ddbf] Running if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi as frederick@dev.cafrecode.co.ke
+ DEBUG [1fa9ddbf] Command: if test ! -d /home/frederick/sites/cafrecode/repo; then echo "Directory does not exist '/home/frederick/sites/cafrecode/repo'" 1>&2; false; fi
+ DEBUG [1fa9ddbf] Finished in 4.482 seconds with exit status 0 (successful).
+ DEBUG [6020ed1c] Running /usr/bin/env git rev-list --max-count=1 develop as frederick@dev.cafrecode.co.ke
+ DEBUG [6020ed1c] Command: cd /home/frederick/sites/cafrecode/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cafrecode-production-frederick.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [6020ed1c] 	46fd982c45c68426dd7a7adb9c85bb88d34403f2
+ DEBUG [6020ed1c] Finished in 1.206 seconds with exit status 0 (successful).
+ DEBUG [bdcd7659] Running if test ! -d /home/frederick/sites/cafrecode/releases/20201018050133; then echo "Directory does not exist '/home/frederick/sites/cafrecode/releases/20201018050133'" 1>&2; false; fi as frederick@dev.cafrecode.co.ke
+ DEBUG [bdcd7659] Command: if test ! -d /home/frederick/sites/cafrecode/releases/20201018050133; then echo "Directory does not exist '/home/frederick/sites/cafrecode/releases/20201018050133'" 1>&2; false; fi
+ DEBUG [bdcd7659] Finished in 4.502 seconds with exit status 0 (successful).
+  INFO [6382d049] Running /usr/bin/env echo "46fd982c45c68426dd7a7adb9c85bb88d34403f2" > REVISION as frederick@dev.cafrecode.co.ke
+ DEBUG [6382d049] Command: cd /home/frederick/sites/cafrecode/releases/20201018050133 && /usr/bin/env echo "46fd982c45c68426dd7a7adb9c85bb88d34403f2" > REVISION
+  INFO [6382d049] Finished in 2.865 seconds with exit status 0 (successful).
+  INFO [ca9f7cec] Running /usr/bin/env ln -s /home/frederick/sites/cafrecode/releases/20201018050133 /home/frederick/sites/cafrecode/releases/current as frederick@dev.cafrecode.co.ke
+ DEBUG [ca9f7cec] Command: /usr/bin/env ln -s /home/frederick/sites/cafrecode/releases/20201018050133 /home/frederick/sites/cafrecode/releases/current
+  INFO [ca9f7cec] Finished in 4.606 seconds with exit status 0 (successful).
+  INFO [a684e73a] Running /usr/bin/env mv /home/frederick/sites/cafrecode/releases/current /home/frederick/sites/cafrecode as frederick@dev.cafrecode.co.ke
+ DEBUG [a684e73a] Command: /usr/bin/env mv /home/frederick/sites/cafrecode/releases/current /home/frederick/sites/cafrecode
+  INFO [a684e73a] Finished in 1.329 seconds with exit status 0 (successful).
+ DEBUG [54e3f9f3] Running /usr/bin/env ls -x /home/frederick/sites/cafrecode/releases as frederick@dev.cafrecode.co.ke
+ DEBUG [54e3f9f3] Command: /usr/bin/env ls -x /home/frederick/sites/cafrecode/releases
+ DEBUG [54e3f9f3] 	20201018042432	20201018050133
+ DEBUG [54e3f9f3] Finished in 4.487 seconds with exit status 0 (successful).
+ DEBUG [0fd66b36] Running if test ! -d /home/frederick/sites/cafrecode/releases; then echo "Directory does not exist '/home/frederick/sites/cafrecode/releases'" 1>&2; false; fi as frederick@dev.cafrecode.co.ke
+ DEBUG [0fd66b36] Command: if test ! -d /home/frederick/sites/cafrecode/releases; then echo "Directory does not exist '/home/frederick/sites/cafrecode/releases'" 1>&2; false; fi
+ DEBUG [0fd66b36] Finished in 10.667 seconds with exit status 0 (successful).
+  INFO [897dcec5] Running /usr/bin/env echo "Branch develop (at 46fd982c45c68426dd7a7adb9c85bb88d34403f2) deployed as release 20201018050133 by frederick" >> /home/frederick/sites/cafrecode/revisions.log as frederick@dev.cafrecode.co.ke
+ DEBUG [897dcec5] Command: cd /home/frederick/sites/cafrecode/releases && /usr/bin/env echo "Branch develop (at 46fd982c45c68426dd7a7adb9c85bb88d34403f2) deployed as release 20201018050133 by frederick" >> /home/frederick/sites/cafrecode/revisions.log
+  INFO [897dcec5] Finished in 1.432 seconds with exit status 0 (successful).
