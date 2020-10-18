@@ -59,6 +59,6 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server 'psm.hsemanagementsoftware.com', user: 'frederick', port: 22, roles: [:web, :app, :db], primary: true
+server 'dev.cafrecode.co.ke', user: 'frederick', port: 22, roles: [:web, :app, :db], primary: true
 set :branch, :develop
 set :ssh_options, { forward_agent: true, user: fetch(:user), auth_methods: %w('publickey') }
