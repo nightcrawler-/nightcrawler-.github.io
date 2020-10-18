@@ -4,6 +4,9 @@ lock "~> 3.14.1"
 set :application, "cafrecode"
 set :repo_url, "git@github.com:nightcrawler-/nightcrawler-.github.io.git"
 
+set :deploy_to, "/home/frederick/sites/#{fetch :application}"
+
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
